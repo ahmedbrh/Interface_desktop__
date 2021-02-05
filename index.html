@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notre site</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<div class="logo"><img src="style/image/logo.png"></div>
+			<div class="liens-de-navigation">
+				<ul>
+					<li><a href="#"> Accueil</a></li>
+					<li><a href="#"> A propos de nous</a></li>
+					<li><a href="#"> Contactez-nous</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="info">
+		<div class="couche"></div>
+		<img src="style/image/tel.png" class="tel">
+			<div id="cercle">
+				<div class="fonction un">
+					<img src="style/image/camera.png">
+					<div>
+						<h1>Camera</h1>
+						<p>20MP, Lentille Grand Angle</p>
+					</div>
+				</div>
+				<div class="fonction deux">
+					<img src="style/image/processeur.png">
+					<div>
+						<h1>Processeur</h1>
+						<p>Octa-core, 2Ghz</p>
+					</div>
+				</div>
+				<div class="fonction trois">
+					<img src="style/image/ecran.png">
+					<div>
+						<h1>Ecran</h1>
+						<p>7.5" Mini-Drop Fullscreen</p>
+					</div>
+				</div>
+				<div class="fonction quatre">
+					<img src="style/image/batterie.png">
+					<div>
+						<h1>Batterie</h1>
+						<p>7000mAH, 800Hrs StandBy</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="control">
+			<img src="style/image/fleche.png" id="haut">
+			<h3>Fonction</h3>
+			<img src="style/image/fleche.png" id="bas">
+		</div>
+	</div>
+	<script>
+		var cercle= document.getElementById("cercle");
+		var haut= document.getElementById("haut");
+		var bas= document.getElementById("bas");
+
+		var rotationVal= cercle.style.transform;
+		var rotationSom;
+
+		haut.onclick=function(){
+			rotationSom=rotationVal+"rotate(-90deg)";
+			cercle.style.transform=rotationSom;
+			rotationVal=rotationSom;
+		}
+		bas.onclick=function(){
+			rotationSom=rotationVal+"rotate(90deg)";
+			cercle.style.transform=rotationSom;
+			rotationVal=rotationSom;
+		}
+	</script>
+</body>
+</html>
